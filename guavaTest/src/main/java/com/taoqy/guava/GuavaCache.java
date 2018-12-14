@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -33,7 +34,15 @@ public class GuavaCache {
         try {
             System.out.println("get data from loadingCache");
             dataCache = (String)loadingCache.get(key);
+            loadingCache.getUnchecked(key);
 
+            //显示的清除缓存
+            //1.个别清除
+            loadingCache.invalidate(key);
+            //2.批量清除
+            loadingCache.invalidateAll(new ArrayList<Integer>());
+            //3.清除所有
+            loadingCache.invalidateAll();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
