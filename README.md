@@ -4,3 +4,5 @@ guavaTest
 
 websocketTest
 
+Zuul
+

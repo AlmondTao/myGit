@@ -1,0 +1,23 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: eureka_client
+
+#security:
+#  basic:
+#    #Eureka服务认证
+#    enabled: true
+#  user:
+#    name: taoqy
+#    password: 123456
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+      #若开启了security.basic.enable:true
+#      defaultZone: http://taoqy:123456@localhost:8081/eureka
+      #若配置的是eureka集群则添加多个
+#      defaultZone: http://eureka_master:8081/eureka, http://eureka_slave1:8081/eureka, http://eureka_slave2:8081/eureka

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/EurekaClient/EurekaClient.iml" filepath="$PROJECT_DIR$/EurekaClient/EurekaClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zuul/Zuul.iml" filepath="$PROJECT_DIR$/Zuul/Zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/guavaTest/guavaTest.iml" filepath="$PROJECT_DIR$/guavaTest/guavaTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/myGit.iml" filepath="$PROJECT_DIR$/myGit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocketTest/websocketTest.iml" filepath="$PROJECT_DIR$/websocketTest/websocketTest.iml" />
     </modules>
   </component>
 </project>

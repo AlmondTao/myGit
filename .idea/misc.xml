@@ -4,6 +4,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/guavaTest/pom.xml" />
+        <option value="$PROJECT_DIR$/websocketTest/pom.xml" />
+        <option value="$PROJECT_DIR$/testZuul/pom.xml" />
+        <option value="$PROJECT_DIR$/testService/pom.xml" />
+        <option value="$PROJECT_DIR$/EurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/EurekaClient/pom.xml" />
+        <option value="$PROJECT_DIR$/Zuul/pom.xml" />
       </list>
     </option>
   </component>

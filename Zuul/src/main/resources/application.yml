@@ -1,0 +1,31 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: testZuul
+zuul:
+  routes:
+    myEurekaClient:
+      path: /eureka/client/**
+      serviceId: eureka_client
+  #放开敏感信息，默认有："Cookie", "Set-Cookie", "Authorization"
+  sensitive-headers:
+  host:
+    connect-timeout-millis: 5000
+  ratelimit:
+    key-prefix: myLimitRate
+    enabled: true
+    repository: IN_MEMORY
+    behind-proxy: true
+    policies:
+      myEurekaClient:
+        limit: 2
+        quota: 1
+        refresh-interval: 30
+        type:
+          - user
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
