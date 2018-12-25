@@ -8,22 +8,43 @@ zuul:
     myEurekaClient:
       path: /eureka/client/**
       serviceId: eureka_client
+    myEurekaClient2:
+      path: /eureka/client2/**
+      serviceId: eureka_client
   #放开敏感信息，默认有："Cookie", "Set-Cookie", "Authorization"
   sensitive-headers:
   host:
     connect-timeout-millis: 5000
   ratelimit:
     key-prefix: myLimitRate
+    #是否开启限流
     enabled: true
+    #存储类型 CONSUL,REDIS,JPA,IN_MEMORY(默认值)
     repository: IN_MEMORY
     behind-proxy: true
     policies:
+      #与路由名对应
       myEurekaClient:
+        #请求次数
         limit: 2
-        quota: 1
-        refresh-interval: 30
+        #请求时间 只是在zuul上处理的时间，通过网关后的时间不计算在内
+        quota: 10
+        #统计窗口刷新时间，默认60秒
+        refresh-interval: 60
+        #限流类型 ORIGIN,USER,URL 配置哪个，在DefaultRateLimitKeyGenerator的key方法里就会加上相应的策略
+        #URL请求路径
+        #ORIGIN 请求地址
+        #USER 用户，若没有自定义，则默认为anonymous
         type:
           - user
+      myEurekaClient2:
+#        limit: 2
+        quota: 1
+        refresh-interval: 300
+        type:
+          - url
+          - user
+          - origin
 
 eureka:
   client:

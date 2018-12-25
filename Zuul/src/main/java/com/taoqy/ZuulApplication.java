@@ -6,8 +6,9 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.netflix.zuul.EnableZuulServer;
 
 /**
- * 〈一句话功能简述〉
- * 〈功能详细描述〉
+ * zuul-ratelimit 原理是利用了zuulfilter，通过创建pre zuulfilter 和post zuulfilter来实现各种策略
+ * 使用者可以通过自定义DefaultRateLimitKeyGenerator 里的key方法来确定请求者的唯一性
+ * 通过配置repository 来存储请求者的请求次数，响应时间以及刷新时间。
  *
  * @author Taoqy
  * @version 1.0, 2018/12/24
@@ -20,5 +21,6 @@ import org.springframework.cloud.netflix.zuul.EnableZuulServer;
 public class ZuulApplication {
     public static void main(String[] args) {
         SpringApplication.run(ZuulApplication.class, args);
+
     }
 }

@@ -20,7 +20,8 @@ public class EurekaController {
 
     @RequestMapping("/hello")
     @ResponseBody
-    public ResponseMessage sayHello(){
+    public ResponseMessage sayHello() throws InterruptedException {
+//        Thread.sleep(1000L);
         return new ResponseMessage(HttpStatus.OK, "你好，我是eurekaClient");
     }
 }
