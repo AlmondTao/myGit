@@ -1,6 +1,7 @@
 package com.taoqy.controller;
 
 import com.taoqy.bean.ResponseMessage;
+import com.taoqy.handler.MyException;
 import com.taoqy.service.EurekaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,9 +37,10 @@ public class EurekaController {
 
     @RequestMapping("/exception")
     @ResponseBody
-    public ResponseMessage exception() throws SQLException {
+    public ResponseMessage exception() throws MyException {
         if(0==0){
-            throw new SQLException();
+//            throw new SQLException();
+            throw new MyException("11111");
         }
         return new ResponseMessage(HttpStatus.BAD_REQUEST, "11111");
     }

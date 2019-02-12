@@ -18,9 +18,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class EurekaControllerAdvice {
 
+    //如果抛出的是MyException则不会走此处理器，会走myException处理器
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public ResponseMessage exceptionHandler(){
-        return new ResponseMessage(HttpStatus.BAD_REQUEST, "产生异常");
+    public ResponseMessage exceptionHandler(Exception e){
+        return new ResponseMessage(HttpStatus.BAD_REQUEST, "ExceptionHandler: "+e.getMessage());
+    }
+
+
+    @ExceptionHandler(MyException.class)
+    @ResponseBody
+    public ResponseMessage myExceptionHandler(Exception e){
+        return new ResponseMessage(HttpStatus.BAD_REQUEST, "MyExceptionHandler: "+e.getMessage());
     }
 }

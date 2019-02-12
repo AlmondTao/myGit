@@ -1,9 +1,15 @@
 package com.taoqy.controller;
 
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
 import com.taoqy.sender.MessageSenderA;
+import org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 /**
  * 〈一句话功能简述〉
@@ -24,4 +30,7 @@ public class RabbitController {
     public void hello(){
         messageSenderA.sendMessage();
     }
+
+
+
 }
