@@ -10,3 +10,4 @@ EurekaClient 8084
 
 Zuul 8085
 
+POITest 8086

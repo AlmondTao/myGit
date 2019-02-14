@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EurekaClient/EurekaClient.iml" filepath="$PROJECT_DIR$/EurekaClient/EurekaClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POITest/POITest.iml" filepath="$PROJECT_DIR$/POITest/POITest.iml" />
       <module fileurl="file://$PROJECT_DIR$/RabbitMqTest1/RabbitMqTest1.iml" filepath="$PROJECT_DIR$/RabbitMqTest1/RabbitMqTest1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Zuul/Zuul.iml" filepath="$PROJECT_DIR$/Zuul/Zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/guavaTest/guavaTest.iml" filepath="$PROJECT_DIR$/guavaTest/guavaTest.iml" />

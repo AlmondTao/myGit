@@ -9,6 +9,7 @@
         <module name="EurekaClient" />
         <module name="EurekaServer" />
         <module name="guavaTest" />
+        <module name="POITest" />
         <module name="RabbitMqTest1" />
         <module name="websocketTest" />
         <module name="Zuul" />
@@ -18,6 +19,7 @@
       <module name="EurekaClient" target="1.8" />
       <module name="EurekaServer" target="1.8" />
       <module name="guavaTest" target="1.8" />
+      <module name="POITest" target="1.8" />
       <module name="RabbitMqTest1" target="1.8" />
       <module name="websocketTest" target="1.8" />
       <module name="Zuul" target="1.8" />
