@@ -11,6 +11,7 @@
         <module name="guavaTest" />
         <module name="POITest" />
         <module name="RabbitMqTest1" />
+        <module name="ThreadTest" />
         <module name="websocketTest" />
         <module name="Zuul" />
       </profile>
@@ -21,6 +22,7 @@
       <module name="guavaTest" target="1.8" />
       <module name="POITest" target="1.8" />
       <module name="RabbitMqTest1" target="1.8" />
+      <module name="ThreadTest" target="8" />
       <module name="websocketTest" target="1.8" />
       <module name="Zuul" target="1.8" />
     </bytecodeTargetLevel>
