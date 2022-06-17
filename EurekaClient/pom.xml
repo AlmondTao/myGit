@@ -55,7 +55,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.40</version>
+            <version>1.2.83</version>
         </dependency>
         <!--需要2.6以上的redis版本，否则报错-->
         <!--<dependency>-->
